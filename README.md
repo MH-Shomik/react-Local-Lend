@@ -1,15 +1,110 @@
-Local Lend 🤝Local Lend is a full-stack web application designed to foster community sharing. It provides a platform for neighbors to list items they are willing to lend and to borrow items from others in their community. From power tools to kitchen gadgets, Local Lend helps reduce waste, save money, and build stronger neighborhood connections.This application is built with a modern tech stack featuring React for a dynamic frontend and a Node.js/Express backend powered by a PostgreSQL database.Features ✨User Authentication: Secure user registration and login system using JWT (JSON Web Tokens). Passwords are fully encrypted using bcrypt.js.Create, Read, Update, Delete (CRUD) Functionality:Browse Items: View a grid of all items currently available for lending.Add Items: Logged-in users can add their own items to the platform with a name and description.Borrow Items: Users can borrow any available item that doesn't belong to them.Responsive Design: A clean, mobile-first interface that works beautifully on any device size.Tech Stack 💻FrontendReact.js: A JavaScript library for building user interfaces.Axios: A promise-based HTTP client for making API requests to the backend.CSS: Custom CSS for responsive styling and a modern look and feel.BackendNode.js: A JavaScript runtime environment for the server.Express.js: A minimal and flexible Node.js web application framework.PostgreSQL: A powerful, open-source object-relational database system.jsonwebtoken (JWT): For generating and verifying access tokens for secure authentication.bcrypt.js: For hashing user passwords before storing them in the database.CORS: For enabling Cross-Origin Resource Sharing.Setup and Installation 🚀To get a local copy up and running, follow these simple steps.PrerequisitesNode.js & npm: Make sure you have Node.js and npm installed. You can download them from nodejs.org.PostgreSQL: You must have a running instance of PostgreSQL.1. Clone the Repositorygit clone https://github.com/your-username/local-lend-final.git
+Local Lend 🤝
+Local Lend is a full-stack web application designed to foster community sharing. It provides a platform for neighbors to list items they are willing to lend and to borrow items from others in their community. From power tools to kitchen gadgets, Local Lend helps reduce waste, save money, and build stronger neighborhood connections.
+
+This application is built with a modern tech stack featuring React for a dynamic frontend and a Node.js/Express backend powered by a PostgreSQL database.
+
+Features ✨
+User Authentication: Secure user registration and login system using JWT (JSON Web Tokens). Passwords are fully encrypted using bcrypt.js.
+
+Create, Read, Update, Delete (CRUD) Functionality:
+
+Browse Items: View a grid of all items currently available for lending.
+
+Add Items: Logged-in users can add their own items to the platform with a name and description.
+
+Borrow Items: Users can borrow any available item that doesn't belong to them.
+
+Responsive Design: A clean, mobile-first interface that works beautifully on any device size.
+
+Tech Stack 💻
+Frontend
+React.js: A JavaScript library for building user interfaces.
+
+Axios: A promise-based HTTP client for making API requests to the backend.
+
+CSS: Custom CSS for responsive styling and a modern look and feel.
+
+Backend
+Node.js: A JavaScript runtime environment for the server.
+
+Express.js: A minimal and flexible Node.js web application framework.
+
+PostgreSQL: A powerful, open-source object-relational database system.
+
+jsonwebtoken (JWT): For generating and verifying access tokens for secure authentication.
+
+bcrypt.js: For hashing user passwords before storing them in the database.
+
+CORS: For enabling Cross-Origin Resource Sharing.
+
+Setup and Installation 🚀
+To get a local copy up and running, follow these simple steps.
+
+Prerequisites
+Node.js & npm: Make sure you have Node.js and npm installed. You can download them from nodejs.org.
+
+PostgreSQL: You must have a running instance of PostgreSQL.
+
+1. Clone the Repository
+git clone https://github.com/your-username/local-lend-final.git
 cd local-lend-final
-2. Backend SetupNavigate to the server directory:cd server
-Install the required npm packages:npm install
-Set up the PostgreSQL database:Create a new database named locallend_final.Connect to the new database and run the SQL commands found in server/database.sql (or from the guide) to create the users and items tables.Create a .env file in the server directory to store your environment variables. The server code will need to be updated to use a library like dotenv to read this file.DB_USER=postgres
+
+2. Backend Setup
+Navigate to the server directory:
+
+cd server
+
+Install the required npm packages:
+
+npm install
+
+Set up the PostgreSQL database:
+
+Create a new database named locallend_final.
+
+Connect to the new database and run the SQL commands found in server/database.sql (or from the guide) to create the users and items tables.
+
+Create a .env file in the server directory to store your environment variables. The server code will need to be updated to use a library like dotenv to read this file.
+
+DB_USER=postgres
 DB_HOST=localhost
 DB_DATABASE=locallend_final
 DB_PASSWORD=YOUR_POSTGRES_PASSWORD
 DB_PORT=5432
 JWT_SECRET=your_super_secret_key_that_is_long_and_random
-(Note: The provided guide hardcodes these values. For better security, modify server/index.js to use process.env.VARIABLE_NAME after installing dotenv).Start the backend server:npm start
-The server should now be running on http://localhost:5001.3. Frontend SetupOpen a new terminal and navigate to the client directory:cd client
-Install the required npm packages:npm install
-Start the frontend React application:npm start
-Your browser should automatically open to http://localhost:3000.How to Use 📋Upon launching the application, you will be greeted with the Login page.If you are a new user, click the "Register here" link.Fill out the registration form with a username, email, and password.After successful registration, you will be redirected to the login page.Log in with your new credentials.You can now see all available items, add new items using the form, and borrow items from other users by clicking the "Borrow" button.
+
+(Note: The provided guide hardcodes these values. For better security, modify server/index.js to use process.env.VARIABLE_NAME after installing dotenv).
+
+Start the backend server:
+
+npm start
+
+The server should now be running on http://localhost:5001.
+
+3. Frontend Setup
+Open a new terminal and navigate to the client directory:
+
+cd client
+
+Install the required npm packages:
+
+npm install
+
+Start the frontend React application:
+
+npm start
+
+Your browser should automatically open to http://localhost:3000.
+
+How to Use 📋
+Upon launching the application, you will be greeted with the Login page.
+
+If you are a new user, click the "Register here" link.
+
+Fill out the registration form with a username, email, and password.
+
+After successful registration, you will be redirected to the login page.
+
+Log in with your new credentials.
+
+You can now see all available items, add new items using the form, and borrow items from other users by clicking the "Borrow" button.
